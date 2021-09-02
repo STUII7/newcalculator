@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+    <title>tareacalculadora</title>
+  </head>
+  <head>
+<style>
+    body{
+        background-color: green;
+        text-align: center;
+    }
+table {
+    width: 100%;
+}
+button {
+    width: 100%;
+    font-size: 450%;
+    color: white;
+    background-color: black;
+    border-color: cornsilk;
+}
+.ac {
+    color: red;
+}
+.SIETE {
+    color: white;
+    background-color: gray;
+}
+ </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="4"><button id="resultado" class="SIETE">0</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="add('1')">1</button></td>
+        <td><button onclick="add('2')">2</button></td>
+        <td><button onclick="add('3')">3</button></td>
+        <td><button onclick="add('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="add('4')">4</button></td>
+        <td><button onclick="add('5')">5</button></td>
+        <td><button onclick="add('6')">6</button></td>
+        <td><button onclick="add('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="add('7')">7</button></td>
+        <td><button onclick="add('8')">8</button></td>
+        <td><button onclick="add('9')">9</button></td>
+        <td><button onclick="add('*')">X</button></td>
+      </tr>
+      <tr>
+        <td colspan="3"><button onclick="add('0')">0</button></td>
+        <td colspan="3"><button onclick="add('/')">%</button></td>          
+      </tr>
+      <tr>
+        <td colspan="2"><button onclick="del()" class="ac">borrar</button></td>
+        <td><button onclick="add('.')">.</button></td>
+        <td><button onclick="calc()">=</button></td>            
+      </tr>
+      <script>
+          function setResultado(value) {
+    document.getElementById('resultado').innerHTML = value;
+}
+function getResultado() {
+    return(document.getElementById('resultado').innerHTML);
+}
+function add(key) { 
+    var resultado = getResultado();
+    if (resultado!='0' || isNaN(key)) setResultado(resultado + key);
+    else setResultado(key);
+}
+function calc() {
+    var resultado = eval(getResultado()); 
+    setResultado(resultado);
+}
+function del() { 
+    setResultado(0);
+}
+      </script>
+    </table>
+  </body>
+</html>
