@@ -29,6 +29,11 @@ color: red;
 color: GRAY;
 background-color: white;
 }
+.texto {
+  height: 45px;
+  text-align: center;
+  color: white;
+}
 </style>
   </head>
   <body>
@@ -37,10 +42,10 @@ background-color: white;
         <td colspan="4"><button id="resultado" class="SIETE">0</button></td>
       </tr>
       <tr>
-        <td><button onclick="add('1')">1</button></td>
-        <td><button onclick="add('2')">2</button></td>
-        <td><button onclick="add('3')">3</button></td>
-        <td><button onclick="add('+')">+</button></td>
+        <td colspan="1"><button onclick="add('1')">1</button></td>
+        <td colspan="1"><button onclick="add('2')">2</button></td>
+        <td colspan="1"><button onclick="add('3')">3</button></td>
+        <td colspan="1"><button onclick="add('+')">+</button></td>
       </tr>
       <tr>
         <td><button onclick="add('4')">4</button></td>
@@ -54,14 +59,18 @@ background-color: white;
         <td><button onclick="add('9')">9</button></td>
         <td><button onclick="add('*')">X</button></td>
       </tr>
-        <td colspan="3"><button  class = "zero"onclick="add('0')">0</button></td>
-        <td colspan="3"><button onclick="add('/')" class="DIVISION">%</button></td>          
+        <td colspan="2"><button  class = "zero"onclick="add('0')">0</button></td>
+        <td colspan="2"><button onclick="add('/')" class="DIVISION">%</button></td>          
       </tr>
       <tr>
         <td colspan="2"><button onclick="del()" class="ac">borrar</button></td>
-        <td><button onclick="add('.')">.</button></td>
+        <td><button onclick="add('.')">,</button></td>
         <td><button onclick="calc()">=</button></td>            
       </tr>
+      <br>
+      <h1 class="texto">
+        if u like this web site ill be happy if u keep using it :)
+      </h1>
       <script>
           function setResultado(value) {
     document.getElementById('resultado').innerHTML = value;
