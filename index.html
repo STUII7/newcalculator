@@ -4,31 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
     <title>tareacalculadora</title>
-  </head>
   <head>
-<style>
-    body{
-        background-color: green;
-        text-align: center;
-    }
+  </head>
+  <style>
+  body{
+    background-color: blue;
+    text-align: center;
+}
 table {
-    width: 100%;
+width: 100%;
 }
 button {
-    width: 100%;
-    font-size: 450%;
-    color: white;
-    background-color: black;
-    border-color: cornsilk;
+width: 100%;
+font-size: 500%;
+color: gray;
+background-color: lightblue;
+border-color: blue;
+
 }
 .ac {
-    color: red;
+color: red;
 }
 .SIETE {
-    color: white;
-    background-color: gray;
+color: GRAY;
+background-color: white;
 }
- </style>
+</style>
   </head>
   <body>
     <table>
@@ -53,9 +54,8 @@ button {
         <td><button onclick="add('9')">9</button></td>
         <td><button onclick="add('*')">X</button></td>
       </tr>
-      <tr>
-        <td colspan="3"><button onclick="add('0')">0</button></td>
-        <td colspan="3"><button onclick="add('/')">%</button></td>          
+        <td colspan="3"><button  class = "zero"onclick="add('0')">0</button></td>
+        <td colspan="3"><button onclick="add('/')" class="DIVISION">%</button></td>          
       </tr>
       <tr>
         <td colspan="2"><button onclick="del()" class="ac">borrar</button></td>
@@ -80,6 +80,9 @@ function calc() {
 }
 function del() { 
     setResultado(0);
+}
+function btnChanger() {
+  let rojo = getElementById(container).style.background = "red"
 }
       </script>
     </table>
