@@ -1,91 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
-    <title>tareacalculadora</title>
-  <head>
-  </head>
-  <style>
-  body{
-    background-color: blue;
-    text-align: center;
-}
-table {
-width: 100%;
-}
-button {
-width: 100%;
-font-size: 500%;
-color: gray;
-background-color: lightblue;
-border-color: blue;
+<head>
+    <style>
+        body{
+            background-color: green;
+        }
 
-}
-.ac {
-color: red;
-}
-.SIETE {
-color: GRAY;
-background-color: white;
-}
-</style>
-  </head>
-  <body>
-    <table>
-      <tr>
-        <td colspan="4"><button id="resultado" class="SIETE">0</button></td>
-      </tr>
-      <tr>
-        <td colspan="1"><button onclick="add('1')">1</button></td>
-        <td colspan="1"><button onclick="add('2')">2</button></td>
-        <td colspan="1"><button onclick="add('3')">3</button></td>
-        <td colspan="1"><button onclick="add('+')">+</button></td>
-      </tr>
-      <tr>
-        <td><button onclick="add('4')">4</button></td>
-        <td><button onclick="add('5')">5</button></td>
-        <td><button onclick="add('6')">6</button></td>
-        <td><button onclick="add('-')">-</button></td>
-      </tr>
-      <tr>
-        <td><button onclick="add('7')">7</button></td>
-        <td><button onclick="add('8')">8</button></td>
-        <td><button onclick="add('9')">9</button></td>
-        <td><button onclick="add('*')">X</button></td>
-      </tr>
-        <td colspan="2"><button  class = "zero"onclick="add('0')">0</button></td>
-        <td colspan="2"><button onclick="add('/')" class="DIVISION">%</button></td>          
-      </tr>
-      <tr>
-        <td colspan="2"><button onclick="del()" class="ac">borrar</button></td>
-        <td><button onclick="add('.')">,</button></td>
-        <td><button onclick="calc()">=</button></td>            
-      </tr>
-      <br>
-      <script>
-          function setResultado(value) {
-    document.getElementById('resultado').innerHTML = value;
-}
-function getResultado() {
-    return(document.getElementById('resultado').innerHTML);
-}
-function add(key) { 
-    var resultado = getResultado();
-    if (resultado!='0' || isNaN(key)) setResultado(resultado + key);
-    else setResultado(key);
-}
-function calc() {
-    var resultado = eval(getResultado()); 
-    setResultado(resultado);
-}
-function del() { 
-    setResultado(0);
-}
-function btnChanger() {
-  let rojo = getElementById(container).style.background = "red"
-}
-      </script>
-    </table>
-  </body>
+        .hello{
+            font-size: 50px;
+            cursor: pointer;
+            color: blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a class="hello" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">https://www.youtube.com/watch?v=dQw4w9WgXcQ</a>
+    <p1>parrafo</p1>
+</body>
 </html>
